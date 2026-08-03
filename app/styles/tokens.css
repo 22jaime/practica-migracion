@@ -1,0 +1,300 @@
+/**
+ * Design Tokens - Gestoría HOL
+ * Sleek.design aesthetic: modern, clean, institutional
+ * Token-first architecture consumed by Tailwind CSS v4
+ */
+
+/* ============================================
+   🎨 LIGHT THEME (Sleek & Institutional)
+   ============================================ */
+:root {
+   /* ──────────────────────────────────────────
+     Foundation: Background & Foreground (SLEEK.DESIGN)
+     ────────────────────────────────────────── */
+   --bg: #F2F2F7;
+   /* User specified light background */
+   --bg-surface: #FFFFFF;
+   /* Pure white for sections/cards */
+   --fg: #0a0a0a;
+   /* Deep black text (high contrast) */
+   --fg-muted: #5A5A5A;
+   /* Muted gray text (WCAG AA: 5.5:1 on bg) */
+
+   /* ──────────────────────────────────────────
+     Neutrals: Clean blacks and whites
+     ────────────────────────────────────────── */
+   --muted: #E8E4DC;
+   /* Muted beige */
+   --muted-2: #D4CFC4;
+   /* Darker beige */
+   --black: #0a0a0a;
+   /* Pure black */
+   --white: #FFFFFF;
+   /* Pure white */
+
+   /* ──────────────────────────────────────────
+     Surfaces: Cards & Containers
+     ────────────────────────────────────────── */
+   --card: #FFFFFF;
+   /* Pure white for elevated surfaces */
+   --surface: #FFFFFF;
+   /* Surface for sections (same as bg-surface) */
+   --border: #E8E4DC;
+   /* Subtle beige border */
+   --border-hover: #D4CFC4;
+   /* Border on hover */
+
+   /* ──────────────────────────────────────────
+     Vibrant Colors (SLEEK.DESIGN PALETTE)
+     ────────────────────────────────────────── */
+   /* ──────────────────────────────────────────
+     Brand Palette (Logo-matched Forest/Sage)
+     ────────────────────────────────────────── */
+   --brand-light: #D8F3DC;
+   /* Very Light Green */
+   --brand-mid: #52B788;
+   /* core brand green */
+   --brand-dark: #1B4332;
+   /* Deep Forest */
+   --brand-gradient: linear-gradient(135deg, var(--brand-mid), var(--brand-light));
+
+   --neon-yellow: #52B788;
+   /* Primary brand color - solid mid green */
+
+   --brand: #52B788;
+   --brand-hover: #40916C;
+   --brand-contrast: #ffffff;
+
+   /* ──────────────────────────────────────────
+     Secondary Harmonized Accents
+     ────────────────────────────────────────── */
+   --vibrant-orange: #CB5A3D;
+   /* Terracotta */
+   --vibrant-red: #A63D40;
+   /* Brick Red */
+   --vibrant-green: #4F7F55;
+   /* Leaf Green */
+   --accent: var(--neon-yellow);
+   /* Map accent to neon yellow */
+   --ring: var(--vibrant-orange);
+   /* Focus ring orange */
+
+   /* ──────────────────────────────────────────
+     Links & Interactive (AA Compliant)
+     ────────────────────────────────────────── */
+   --link: #0066CC;
+   /* Primary link color (WCAG AA: 7.2:1 on bg) */
+   --link-hover: #004499;
+   /* Link hover state (WCAG AA: 10.1:1 on bg) */
+   --shadow-color: rgba(0, 0, 0, 1);
+   /* Base shadow color for customization */
+
+   /* ──────────────────────────────────────────
+     Semantic States (vibrant)
+     ────────────────────────────────────────── */
+   --success: #34C759;
+   /* Vibrant green */
+   --warning: #FFCC00;
+   /* Vibrant yellow-orange */
+   --danger: #FF3B30;
+   /* Vibrant red */
+   --info: #007AFF;
+   /* Bright blue */
+
+   /* ──────────────────────────────────────────
+     Typography: Font Families
+     ────────────────────────────────────────── */
+   --font-sans: var(--font-poppins), 'Poppins', ui-sans-serif, system-ui, -apple-system, sans-serif;
+   --font-display: var(--font-poppins), 'Poppins', ui-sans-serif, system-ui, -apple-system, sans-serif;
+
+   /* ──────────────────────────────────────────
+     Geometry: Border Radius (LARGE - sleek.design)
+     ────────────────────────────────────────── */
+   --r-sm: 0.75rem;
+   /* 12px - Small elements */
+   --r-md: 1.25rem;
+   /* 20px - Cards, inputs */
+   --r-lg: 1.75rem;
+   /* 28px - Large cards */
+   --r-xl: 2.5rem;
+   /* 40px - Containers, sections */
+   --r-screen: 2.5rem;
+   /* 40px - Mobile screen-like containers */
+   --radius: var(--r-md);
+   /* Default radius for components (shadcn/ui compat) */
+
+   /* ──────────────────────────────────────────
+     Elevation: Shadows (PRONOUNCED - sleek.design)
+     ────────────────────────────────────────── */
+   --sh-sm: 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+   --sh-md: 0 4px 8px 0 rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+   --sh-lg: 0 8px 16px -4px rgba(0, 0, 0, 0.12), 0 4px 8px -4px rgba(0, 0, 0, 0.06);
+   --sh-hover: 0 12px 24px -8px rgba(0, 0, 0, 0.16), 0 6px 12px -6px rgba(0, 0, 0, 0.08);
+   --sh-float: 0 16px 32px -12px rgba(0, 0, 0, 0.20), 0 8px 16px -8px rgba(0, 0, 0, 0.10);
+
+   /* ──────────────────────────────────────────
+     Transitions: Short, snappy (sleek feel)
+     ────────────────────────────────────────── */
+   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+   --transition-base: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   /* ──────────────────────────────────────────
+     Spacing Scale
+     ────────────────────────────────────────── */
+   --space-1: 0.25rem;
+   /* 4px */
+   --space-2: 0.5rem;
+   /* 8px */
+   --space-3: 1rem;
+   /* 16px */
+   --space-4: 1.5rem;
+   /* 24px */
+   --space-5: 2.5rem;
+   /* 40px */
+   --space-6: 4rem;
+   /* 64px */
+}
+
+
+
+/* ============================================
+   🌙 DARK THEME (Sleek & Institutional)
+   ============================================ */
+[data-theme="dark"] {
+   /* ──────────────────────────────────────────
+     Foundation: Dark with warm undertone
+     ────────────────────────────────────────── */
+   --bg: #0a0a0a;
+   /* Near-black background */
+   --bg-surface: #1A1612;
+   /* Warm dark surface */
+   --fg: #fafafa;
+   /* Off-white text */
+   --fg-muted: #a3a3a3;
+   /* Muted secondary text */
+
+   /* ──────────────────────────────────────────
+     Neutrals: Dark grays
+     ────────────────────────────────────────── */
+   --muted: #2D2820;
+   /* Warm dark gray */
+   --muted-2: #3D3630;
+   /* Medium dark gray */
+   --black: #0a0a0a;
+   /* Pure black */
+   --white: #FFFFFF;
+   /* Pure white */
+
+   /* ──────────────────────────────────────────
+     Surfaces: Elevated dark surfaces
+     ────────────────────────────────────────── */
+   --card: #171717;
+   /* Dark card background */
+   --surface: #1A1612;
+   /* Surface for sections (same as bg-surface) */
+   --border: #2D2820;
+   /* Subtle warm border */
+   --border-hover: #3D3630;
+   /* Border on hover */
+
+   /* ──────────────────────────────────────────
+     Vibrant Colors (BRIGHTER for dark mode)
+     ────────────────────────────────────────── */
+   /* ──────────────────────────────────────────
+      Harmonized Brand Colors (Brighter for dark)
+      ────────────────────────────────────────── */
+   --neon-yellow: #65C69A;
+   /* Slightly brighter brand green for dark mode */
+   --vibrant-orange: #E3826B;
+   /* Softer terracotta */
+   --vibrant-red: #C45D60;
+   /* Softer brick red */
+   --vibrant-green: #6EB076;
+   /* Brighter leaf green */
+
+   --brand-light: #B7E4C7;
+   --brand-mid: #40916C;
+   --brand-gradient: linear-gradient(135deg, var(--brand-mid), var(--brand-light));
+
+   --brand: #52B788;
+   --brand-hover: #65C69A;
+   --ring: var(--vibrant-orange);
+   /* Orange focus ring */
+
+   /* ──────────────────────────────────────────
+     Links (brighter for dark)
+     ────────────────────────────────────────── */
+   --link: #5C9FFF;
+   /* Brighter link for dark mode */
+   --link-hover: #7FB3FF;
+   /* Even brighter on hover */
+   --shadow-color: rgba(0, 0, 0, 1);
+   /* Shadow base */
+
+   /* ──────────────────────────────────────────
+     Semantic States
+     ────────────────────────────────────────── */
+   --success: #34d399;
+   /* Bright success */
+   --warning: #fbbf24;
+   /* Bright warning */
+   --danger: #f87171;
+   /* Bright danger */
+   --info: #60a5fa;
+   /* Bright blue info */
+
+   /* ──────────────────────────────────────────
+     Elevation: Subtle shadows for dark mode
+     ────────────────────────────────────────── */
+   --sh-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+   --sh-md: 0 1px 3px 0 rgba(0, 0, 0, 0.6),
+      0 1px 2px -1px rgba(0, 0, 0, 0.5);
+   --sh-lg: 0 4px 6px -1px rgba(0, 0, 0, 0.7),
+      0 2px 4px -2px rgba(0, 0, 0, 0.6);
+   --sh-hover: 0 8px 16px -4px rgba(0, 0, 0, 0.8),
+      0 4px 8px -4px rgba(0, 0, 0, 0.7);
+}
+
+
+/* ============================================
+   🎨 BACKGROUND PATTERNS (Subtle, CSS-only)
+   ============================================ */
+
+/* Noise pattern using CSS gradients (subtle texture) */
+.bg-noise::before {
+   content: "";
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0.03;
+   z-index: -1;
+   background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 4px),
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(0, 0, 0, 0.03) 2px, rgba(0, 0, 0, 0.03) 4px);
+   pointer-events: none;
+}
+
+[data-theme="dark"] .bg-noise::before {
+   opacity: 0.05;
+   background-image:
+      repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px),
+      repeating-linear-gradient(90deg, transparent, transparent 2px, rgba(255, 255, 255, 0.03) 2px, rgba(255, 255, 255, 0.03) 4px);
+}
+
+/* Dotted pattern (alternative, more subtle) */
+.bg-dots {
+   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+   background-size: 24px 24px;
+}
+
+[data-theme="dark"] .bg-dots {
+   background-image: radial-gradient(circle, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+/* Dedicated utility for brand color to ensure visibility */
+.bg-brand-solid {
+   background-color: var(--neon-yellow) !important;
+   background-image: none !important;
+}

@@ -1,0 +1,46 @@
+:root {
+    /* ──────────────────────────────────────────
+     Motion System: Durations
+     ────────────────────────────────────────── */
+    --dur-1: 120ms;
+    /* Fast: Micro-interactions (hover, active) */
+    --dur-2: 180ms;
+    /* Base: Standard transitions (color, opacity) */
+    --dur-3: 1000ms;
+    /* Slow: Layout changes, large movements - Increased for softness */
+    --dur-4: 1200ms;
+    /* Slower: Entrance animations (reveal) - Increased for softness */
+    --dur-fluid: 1500ms;
+    /* Fluid interaction (slower) - Increased for softness */
+
+    /* ──────────────────────────────────────────
+     Motion System: Easings (Premium Feel)
+     ────────────────────────────────────────── */
+    --ease-out: cubic-bezier(0.2, 0, 0.2, 1);
+    /* Soft deceleration (Standard) */
+    --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    /* Elegant acceleration/deceleration */
+    --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    /* Subtle bounce */
+    --ease-premium: cubic-bezier(0.4, 0.0, 0.2, 1);
+    /* Very standard, smooth ease-in-out */
+    --ease-fluid: cubic-bezier(0.4, 0.0, 0.2, 1);
+    /* Very soft and slow deceleration */
+
+    /* ──────────────────────────────────────────
+     Motion System: Effects
+     ────────────────────────────────────────── */
+    --lift-1: -2px;
+    --lift-2: -4px;
+    --blur-1: blur(8px);
+    --blur-2: blur(16px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --dur-1: 0ms;
+        --dur-2: 0ms;
+        --dur-3: 0ms;
+        --dur-4: 0ms;
+    }
+}
