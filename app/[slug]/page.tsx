@@ -86,7 +86,7 @@ export default async function DocumentPage({ params }: { params: Promise<{ slug:
                 {/* 1. Hero Section (Dynamic) */}
                 <DocumentHero
                     title={document.slugHeroTitle}
-                    subtitle="No importa si necesitas uno nuevo o solo legalizarlo en el consulado español de la habana. Podemos gestionarlo 100% online y tiempo record."
+                    subtitle="No importa si necesitas uno nuevo o solo legalizarlo en el consulado español de la habana."
                     frontImage={document.heroImage}
                 />
 
