@@ -36,7 +36,7 @@ export function Hero() {
                         {/* 2. H1 - Premium Typography */}
                         <Reveal variant="blur-up" duration="slower" delay={100} className="mb-6">
                             <h1 className="text-4xl md:text-5xl lg:text-[70px] font-extrabold tracking-[-0.02em] leading-[1.1] text-foreground drop-shadow-sm">
-                                Reúne a tu familia y regulariza tu vida en España
+                                esto es una prueba
                             </h1>
                         </Reveal>
 
